@@ -41,7 +41,7 @@ Copy SPADS to server:
 
 Install game:
   cmd.run:
-    {% if pillar["game"] %}
+    {% if pillar["game"] is defined %}
     - name: /home/spring/bin/pr-downloader --download-game {{ pillar["game"] }}
     {% else %}
     - name: /home/spring/bin/pr-downloader --download-game s44:test
