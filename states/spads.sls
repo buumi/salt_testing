@@ -15,17 +15,17 @@ Install required packages:
       - perl
 
 Copy Spring to server:
-  /home/spads/spring:
-    file.recurse:
-      - source: salt://files/spring
-      - include_empty: True
-      - user: spads
-      - group: users
+  file.recurse:
+    - name: /home/spads/spring
+    - source: salt://files/spring
+    - include_empty: True
+    - user: spads
+    - group: users
 
 Copy SPADS to server:
-  /home/spads/spads:
-    file.recurse:
-      - source: salt://files/spads
-      - include_empty: True
-      - user: spads
-      - group: users
+  file.recurse:
+    - name: /home/spads/spads
+    - source: salt://files/spads
+    - include_empty: True
+    - user: spads
+    - group: users
