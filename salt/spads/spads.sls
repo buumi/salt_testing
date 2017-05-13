@@ -56,18 +56,18 @@ Update hostingPresets.conf:
     - group: users
     - file_mode: keep
 
-  Update spads.conf:
-    file.managed:
-      - name: /home/spads/etc/spads.conf
-      - source: salt://salt/spads/files/spads.conf
-      - user: spads
-      - group: users
-      - file_mode: keep
+Update spads.conf:
+  file.managed:
+    - name: /home/spads/etc/spads.conf
+    - source: salt://salt/spads/files/spads.conf
+    - user: spads
+    - group: users
+    - file_mode: keep
 
-  Update users.conf:
-    file.managed:
-      - name: /home/spads/etc/users.conf
-      - source: salt://salt/spads/files/users.conf
-      - user: spads
-      - group: users
-      - file_mode: keep
+Update users.conf:
+  file.managed:
+    - name: /home/spads/etc/users.conf
+    - source: salt://salt/spads/files/users.conf
+    - user: spads
+    - group: users
+    - file_mode: keep
