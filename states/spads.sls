@@ -21,6 +21,7 @@ Copy Spring to server:
     - include_empty: True
     - user: spads
     - group: users
+    - mode: keep
 
 Copy SPADS to server:
   file.recurse:
@@ -29,3 +30,4 @@ Copy SPADS to server:
     - include_empty: True
     - user: spads
     - group: users
+    - mode: keep
