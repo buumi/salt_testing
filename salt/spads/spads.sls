@@ -41,11 +41,7 @@ Copy SPADS to server:
 
 Install game:
   cmd.run:
-    {% if pillar["game"] is defined %}
     - name: /home/spads/spring/bin/pr-downloader --download-game {{ pillar["game"] }}
-    {% else %}
-    - name: /home/spads/spring/bin/pr-downloader --download-game s44:test
-    {% endif %}
 
 {% for map in maps %}
 /home/spads/spring/bin/pr-downloader --download-map {{ map }}:
@@ -55,7 +51,7 @@ Install game:
 Update hosting presets:
   file.managed:
     - name: /home/spads/etc/hostingPresets.conf
-    - source: salt://spads/files/hostingPresets.conf
+    - source: salt://salt/spads/files/hostingPresets.conf
     - user: spads
     - group: users
     - file_mode: keep
