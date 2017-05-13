@@ -50,7 +50,7 @@ Install game:
 
 Update hostingPresets.conf:
   file.managed:
-    - name: /home/spads/etc/hostingPresets.conf
+    - name: /home/spads/spads/etc/hostingPresets.conf
     - source: salt://salt/spads/files/hostingPresets.conf
     - user: spads
     - group: users
@@ -58,7 +58,7 @@ Update hostingPresets.conf:
 
 Update spads.conf:
   file.managed:
-    - name: /home/spads/etc/spads.conf
+    - name: /home/spads/spads/etc/spads.conf
     - source: salt://salt/spads/files/spads.conf
     - user: spads
     - group: users
@@ -66,7 +66,7 @@ Update spads.conf:
 
 Update users.conf:
   file.managed:
-    - name: /home/spads/etc/users.conf
+    - name: /home/spads/spads/etc/users.conf
     - source: salt://salt/spads/files/users.conf
     - user: spads
     - group: users
