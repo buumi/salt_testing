@@ -22,7 +22,7 @@ Copy Spring to server:
       - user: spads
       - group: users
 
-Copy Spring to server:
+Copy SPADS to server:
   /home/spads/spads:
     file.recurse:
       - source: salt://files/spads
