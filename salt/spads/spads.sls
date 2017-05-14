@@ -27,7 +27,6 @@ Copy Spring to server:
     - user: spads
     - group: users
     - file_mode: keep
-    - dir_mode: keep
 
 Copy SPADS to server:
   file.recurse:
@@ -37,7 +36,6 @@ Copy SPADS to server:
     - user: spads
     - group: users
     - file_mode: keep
-    - dir_mode: keep
 
 Install game:
   cmd.run:
