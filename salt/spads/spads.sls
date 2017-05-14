@@ -50,28 +50,25 @@ Install game:
     - user: spads
 {% endfor %}
 
-Update hostingPresets.conf:
+{% set config_files = ["hostingPresets.conf", "spads.conf", "users.conf", "S44Update.conf", "S44UpdateCmd.conf"] %}
+{% set plugin_files = ["S44Update.pm", "S44UpdateHelp.dat"] %}
+
+{% for config_file in config_files %}
+/home/spads/spads/etc/{{config_file}}:
   file.managed:
-    - name: /home/spads/spads/etc/hostingPresets.conf
-    - source: salt://salt/spads/files/hostingPresets.conf
+    - source: salt://salt/spads/files/{{config_file}}
     - template: jinja
     - user: spads
     - group: users
     - file_mode: keep
+    - makedirs: True
 
-Update spads.conf:
+{% for plugin_file in plugin_files %}
+/home/spads/spads/var/plugins/{{plugin_file}}:
   file.managed:
-    - name: /home/spads/spads/etc/spads.conf
-    - source: salt://salt/spads/files/spads.conf
+    - source: salt://salt/spads/files/{{plugin_file}}
     - template: jinja
     - user: spads
     - group: users
     - file_mode: keep
-
-Update users.conf:
-  file.managed:
-    - name: /home/spads/spads/etc/users.conf
-    - source: salt://salt/spads/files/users.conf
-    - user: spads
-    - group: users
-    - file_mode: keep
+    - makedirs: True
