@@ -42,10 +42,12 @@ Copy SPADS to server:
 Install game:
   cmd.run:
     - name: /home/spads/spring/bin/pr-downloader --download-game {{ pillar["game"] }}
+    - user: spads
 
 {% for map in maps %}
 /home/spads/spring/bin/pr-downloader --download-map {{ map }}:
-  cmd.run
+  cmd.run:
+    - user: spads
 {% endfor %}
 
 Update hostingPresets.conf:
