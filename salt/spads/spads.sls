@@ -1,6 +1,6 @@
 # Pass game, autohost lobby username and password as pillars
 
-{% set maps = ['1944_Titan', '1944_Kiev_V4', '1944_Village_Crossing_v2', 'DeltaSiegeDry'] %}
+{% set maps = ['1944_Titan', '1944_Kiev_V4', '1944_Village_Crossing_v2', 'DeltaSiegeDry', 'DeltaSiege', '1944_Cooper_Hill_v3'] %}
 
 User account for spads:
   user.present:
