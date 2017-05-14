@@ -62,6 +62,7 @@ Install game:
     - group: users
     - file_mode: keep
     - makedirs: True
+{% endfor %}
 
 {% for plugin_file in plugin_files %}
 /home/spads/spads/var/plugins/{{plugin_file}}:
@@ -72,3 +73,4 @@ Install game:
     - group: users
     - file_mode: keep
     - makedirs: True
+{% endfor %}
