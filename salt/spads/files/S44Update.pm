@@ -56,7 +56,7 @@ sub dlStart {
   my ($user, $filename)=@_;
   my $springServerPath = getSpadsConf()->{springServer};
   my $springServerDir = dirname($springServerPath);
-  system("$springServerDir/pr-downloader --filesystem-writepath /data/users/s44/spads/game_data --rapid-download s44:test>>$filename 2>&1");
+  system("$springServerDir/bin/pr-downloader --rapid-download s44:test>>$filename 2>&1");
   exit 0;
 }
 
